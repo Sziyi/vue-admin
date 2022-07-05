@@ -13,6 +13,7 @@ module.exports = {
     quotes: 'error', // 默认
     quotes: 'warn', // 修改为警告
     quotes: 'off', // 修改不校验
-    'space-before-function-paren': 'off'
+    'space-before-function-paren': 'off',
+    
   }
 }
