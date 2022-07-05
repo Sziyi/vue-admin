@@ -1,24 +1,53 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-const routes = [
+// const routes = [
+//   {
+//     path: '/login',
+//     name: 'Login',
+//     component: () => import('../views/login')
+//   },
+//   {
+//     path: '/',
+//     name: 'index',
+//     component: () => import('../views/index')
+//   }
+// ]
+
+import Sys from './modules/sysUsers'
+import sysDicts from './modules/sysDicts'
+import sysMenu from './modules/sysMenu'
+import sysRole from './modules/sysRole'
+
+// 公有路由
+export const publicRoutes = [
   {
     path: '/login',
     name: 'login',
     component: () => import('../views/login')
+  },
+  {
+    path: '/',
+    component: () => import('../layout'),
+    redirect: '/index',
+    children: [
+      {
+        path: '/index',
+        name: '/index',
+        component: () => import('../views/index'),
+        meta: {
+          title: '首页',
+          icon: 'personnel'
+        }
+      }
+    ]
   }
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  // }
 ]
 
+// 私有路由表
+export const privateRoutes = [Sys, sysDicts, sysMenu, sysRole]
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes: [...publicRoutes, ...privateRoutes]
 })
 
 export default router

@@ -14,6 +14,17 @@ module.exports = {
     quotes: 'warn', // 修改为警告
     quotes: 'off', // 修改不校验
     'space-before-function-paren': 'off',
-    
-  }
+    'vue/multi-word-component-names': 'off'
+  },
+  overrides: [
+    {
+      files: [
+        '**/__tests__/*.{j,t}s?(x)',
+        '**/tests/unit/**/*.spec.{j,t}s?(x)'
+      ],
+      env: {
+        jest: true
+      }
+    }
+  ]
 }
