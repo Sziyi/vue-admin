@@ -1,13 +1,23 @@
 <template>
   <template v-if="!props.tree.children || props.tree.children.length <= 0">
     <el-menu-item :index="tree.path">
-      <span>{{ props.tree.meta.title }}</span>
+      <span>
+        <el-icon>
+          <svg-icon :icon="props.tree.meta.icon"></svg-icon>
+        </el-icon>
+        {{ props.tree.meta.title }}</span
+      >
     </el-menu-item>
   </template>
 
   <template v-else>
     <el-sub-menu :index="tree.path">
-      <template #title>{{ props.tree.meta.title }}</template>
+      <template #title>
+        <el-icon>
+          <svg-icon :icon="props.tree.meta.icon"></svg-icon>
+        </el-icon>
+        {{ props.tree.meta.title }}</template
+      >
       <menu-item
         v-for="(item, index) in props.tree.children"
         :key="index"

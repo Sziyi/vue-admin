@@ -81,6 +81,7 @@ const login = async () => {
       const res = await store.dispatch('user/login', loginForm)
       console.log(res)
       if (res.data.code === 200) {
+        res()
         router.push('/')
       }
     }

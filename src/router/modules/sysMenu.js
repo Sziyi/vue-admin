@@ -7,7 +7,7 @@ export default {
   component: Layout,
   meta: {
     title: '系统管理',
-    icon: 'like-outlined'
+    icon: 'fullscreen'
   },
   children: [
     {
@@ -16,7 +16,7 @@ export default {
       component: () => import('@/views/sys-menus'),
       meta: {
         title: '菜单管理',
-        icon: 'bars-outlined'
+        icon: 'guide'
       }
     }
   ]

@@ -1,34 +1,33 @@
 <template>
-<div class="h">
-  <header class="header">
-    <h2>VueAdmin后台管理系统</h2>
-    <img src="../../assets/1.jpg" class="img" />
-    <el-dropdown>
-      <span class="el-dropdown-link">
-        test
-        <el-icon class="el-icon--right">
-          <arrow-down />
-        </el-icon>
-      </span>
-      <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item>个人中心</el-dropdown-item>
-          <el-dropdown-item @click="tc">退出</el-dropdown-item>
-        </el-dropdown-menu>
-      </template>
-    </el-dropdown>
-    <span class="s">视频讲解</span>
-    <span class="s">网站</span>
-  </header>
-   <div class='tagsview'>
+  <div class="h">
+    <header class="header">
+      <h2>VueAdmin后台管理系统</h2>
+      <img src="../../assets/1.jpg" class="img" />
+      <el-dropdown>
+        <span class="el-dropdown-link">
+          test
+          <el-icon class="el-icon--right">
+            <arrow-down />
+          </el-icon>
+        </span>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item>个人中心</el-dropdown-item>
+            <el-dropdown-item @click="tc">退出</el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
+      <span class="s">视频讲解</span>
+      <span class="s">网站</span>
+    </header>
+    <div class="tagsview">
       <TagsView></TagsView>
     </div>
-    </div>
+  </div>
 </template>
 
 <script setup>
 import route from '../../router'
-
 import TagsView from '@/components/TagsView'
 const tc = () => {
   localStorage.removeItem('router')
@@ -72,8 +71,8 @@ const tc = () => {
     border-bottom: 2px solid rgb(22, 110, 242);
   }
 }
-.h{
-  height:93px;
+.h {
+  height: 93px;
   background-color: antiquewhite;
   .tagsview {
     color: #333;

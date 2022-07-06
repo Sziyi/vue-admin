@@ -36,11 +36,12 @@ export const publicRoutes = [
         component: () => import('../views/index'),
         meta: {
           title: '首页',
-          icon: 'personnel'
+          icon: 'tree'
         }
       }
     ]
   }
+  
 ]
 
 // 私有路由表

@@ -7,7 +7,7 @@ export default {
   component: Layout,
   meta: {
     title: '系统工具',
-    icon: 'setting-outlined'
+    icon: 'article-create'
   },
   children: [
     {
@@ -16,7 +16,7 @@ export default {
       component: () => import('@/views/sys-dicts'),
       meta: {
         title: '数字字典',
-        icon: 'file-search-outlined'
+        icon: 'example'
       }
     }
   ]

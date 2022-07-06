@@ -7,7 +7,7 @@ export default {
   component: Layout,
   meta: {
     title: '系统管理',
-    icon: 'like-outlined'
+    icon: 'fullscreen'
   },
   children: [
     {
@@ -16,7 +16,7 @@ export default {
       component: () => import('@/views/sys-roles'),
       meta: {
         title: '角色列表',
-        icon: 'appstore-outlined'
+        icon: 'introduce'
       }
     }
   ]
